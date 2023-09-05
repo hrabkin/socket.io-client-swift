@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191DAE4F2AA74C0400C592AD /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 191DAE4E2AA74C0400C592AD /* Starscream */; };
 		1C6572803D7E252A77A86E5F /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C65763817782DFAC67BE05C /* SocketManager.swift */; };
 		1C6573B22DC9423CDFC32F05 /* SocketRawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C657533E849FC3E4342C602 /* SocketRawView.swift */; };
 		1C657CDE5D510E8E2E573E39 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6577B639C34EE1C8829D9A /* utils.swift */; };
@@ -19,7 +20,6 @@
 		1C686BE71F869AFD007D8627 /* SocketParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C686BD71F869AF1007D8627 /* SocketParserTest.swift */; };
 		1C686BE81F869AFD007D8627 /* SocketNamespacePacketTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C686BD81F869AF1007D8627 /* SocketNamespacePacketTest.swift */; };
 		572EF2431B51F18A00EEBB58 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572EF2381B51F18A00EEBB58 /* SocketIO.framework */; };
-		579C7D4C2731B487009F8A2F /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579C7D4B2731B487009F8A2F /* Starscream.xcframework */; };
 		6CA08A981D615C0B0061FD2A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA08A971D615C0B0061FD2A /* Security.framework */; };
 		74BF53581F894326004972D8 /* SocketIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 572EF23C1B51F18A00EEBB58 /* SocketIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74DA21741F09440F009C19EE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DA21731F09440F009C19EE /* libz.tbd */; };
@@ -117,8 +117,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				74DA21741F09440F009C19EE /* libz.tbd in Frameworks */,
-				579C7D4C2731B487009F8A2F /* Starscream.xcframework in Frameworks */,
 				6CA08A981D615C0B0061FD2A /* Security.framework in Frameworks */,
+				191DAE4F2AA74C0400C592AD /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +354,9 @@
 			dependencies = (
 			);
 			name = SocketIO;
+			packageProductDependencies = (
+				191DAE4E2AA74C0400C592AD /* Starscream */,
+			);
 			productName = "SocketIO-Mac";
 			productReference = 572EF2381B51F18A00EEBB58 /* SocketIO.framework */;
 			productType = "com.apple.product-type.framework";
@@ -406,6 +409,9 @@
 				en,
 			);
 			mainGroup = 572EF20D1B51F12F00EEBB58;
+			packageReferences = (
+				191DAE4D2AA74C0400C592AD /* XCRemoteSwiftPackageReference "Starscream" */,
+			);
 			productRefGroup = 572EF21A1B51F16C00EEBB58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -610,6 +616,7 @@
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -652,6 +659,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = SocketIO/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -691,6 +699,7 @@
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -728,6 +737,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = SocketIO/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -958,6 +968,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		191DAE4D2AA74C0400C592AD /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hrabkin/Starscream.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		191DAE4E2AA74C0400C592AD /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 191DAE4D2AA74C0400C592AD /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 572EF20E1B51F12F00EEBB58 /* Project object */;
 }
