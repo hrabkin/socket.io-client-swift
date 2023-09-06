@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		191DAE4F2AA74C0400C592AD /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 191DAE4E2AA74C0400C592AD /* Starscream */; };
+		191DAE532AA757A700C592AD /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579C7D4B2731B487009F8A2F /* Starscream.xcframework */; };
 		1C6572803D7E252A77A86E5F /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C65763817782DFAC67BE05C /* SocketManager.swift */; };
 		1C6573B22DC9423CDFC32F05 /* SocketRawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C657533E849FC3E4342C602 /* SocketRawView.swift */; };
 		1C657CDE5D510E8E2E573E39 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6577B639C34EE1C8829D9A /* utils.swift */; };
@@ -117,8 +117,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				74DA21741F09440F009C19EE /* libz.tbd in Frameworks */,
+				191DAE532AA757A700C592AD /* Starscream.xcframework in Frameworks */,
 				6CA08A981D615C0B0061FD2A /* Security.framework in Frameworks */,
-				191DAE4F2AA74C0400C592AD /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +355,6 @@
 			);
 			name = SocketIO;
 			packageProductDependencies = (
-				191DAE4E2AA74C0400C592AD /* Starscream */,
 			);
 			productName = "SocketIO-Mac";
 			productReference = 572EF2381B51F18A00EEBB58 /* SocketIO.framework */;
@@ -410,7 +409,6 @@
 			);
 			mainGroup = 572EF20D1B51F12F00EEBB58;
 			packageReferences = (
-				191DAE4D2AA74C0400C592AD /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = 572EF21A1B51F16C00EEBB58 /* Products */;
 			projectDirPath = "";
@@ -968,25 +966,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		191DAE4D2AA74C0400C592AD /* XCRemoteSwiftPackageReference "Starscream" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hrabkin/Starscream.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		191DAE4E2AA74C0400C592AD /* Starscream */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 191DAE4D2AA74C0400C592AD /* XCRemoteSwiftPackageReference "Starscream" */;
-			productName = Starscream;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 572EF20E1B51F12F00EEBB58 /* Project object */;
 }

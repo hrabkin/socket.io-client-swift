@@ -1,5 +1,8 @@
 [![Build Status](https://travis-ci.org/socketio/socket.io-client-swift.svg?branch=master)](https://travis-ci.org/socketio/socket.io-client-swift)
 
+This fork sets build-for-distribution to YES, and links Starscream library dynamically
+
+
 # Socket.IO-Client-Swift
 Socket.IO-client for iOS/OS X.
 
